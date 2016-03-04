@@ -11,7 +11,8 @@ namespace RedisDemo.Endpoints
         {
             _catalogService = catalogService;
 
-            Get["/company({companyId}/catalog"] = _ => GetCompanyCatalog(_.companyId);
+            Get["/"] = _ => "hello world";
+            Get["/companies({companyId})/catalog"] = _ => GetCompanyCatalog(_.companyId);
         }
 
         private dynamic GetCompanyCatalog(int companyId)

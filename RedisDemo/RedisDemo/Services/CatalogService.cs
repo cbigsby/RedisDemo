@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using IQ.Catalogs.Client;
 using IQ.Catalogs.Web.Api.Contract.v1;
+using IQ.Phoenix.ServiceClient.Common;
 
 namespace RedisDemo.Services
 {
@@ -8,9 +9,9 @@ namespace RedisDemo.Services
     {
         private readonly ICatalogsClient _catalogsClient;
 
-        public CatalogService(ICatalogsClient catalogsClient)
+        public CatalogService(ICatalogsClientFactory catalogsClientFactory)
         {
-            _catalogsClient = catalogsClient;
+            _catalogsClient = catalogsClientFactory.Create(TokenSource.Service);
         }
 
         public IEnumerable<CatalogItemResource> GetCatalogItems(int companyId)
