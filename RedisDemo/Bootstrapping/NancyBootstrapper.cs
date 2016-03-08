@@ -6,7 +6,7 @@ using Nancy.TinyIoc;
 using Nancy.Bootstrapper;
 using RedisDemo.Services;
 
-namespace RedisDemo.Auth
+namespace RedisDemo.Bootstrapping
 {
     public class NancyBootstrapper : DefaultNancyBootstrapper
     {

@@ -1,6 +1,6 @@
 ﻿using IQ.Phoenix.ServiceClient.Common;
 
-namespace RedisDemo.Auth
+namespace RedisDemo.Bootstrapping
 {
     public class HardCodedTokenSource : IGetAuthToken
     {
